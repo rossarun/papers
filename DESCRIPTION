@@ -1,0 +1,26 @@
+Type: Compendium
+Package: compendium
+Title: TBD
+Version: 0.0.1
+Authors@R: 
+    person(given = "Tyson",
+           family = "Swetnam",
+           role = c("aut", "cre"),
+           email = "tswetnam@arizona.edu",
+           comment = c(ORCID = "0000-0002-6639-7181"))
+Description: Perspectives Paper
+License: BSD + file LICENSE
+Depends: 
+    rmarkdown,
+    rticles,
+    kableExtra,
+    hexSticker,
+    magick,
+    here,
+    tibble,
+    tidyr,
+    dplyr,
+    callr,
+    xtable
+Encoding: UTF-8
+LazyData: true
