@@ -1,75 +1,69 @@
 ---
-title: Predicting Phenotype from Multi-Scale Genomic and Environment Data using Neural
-  Networks and Knowledge Graphs
-author:
-  - name: Ryan Bartelme
-    # https://github.com/rbartelme
-    affiliation: University of Arizona
-    address:
-      - 1657 E Helen St
-      - 
-      - 85721, Tucson, AZ, USA
-      - \orcid{here}
-    email: rbartelme@arizona.edu
-  - name: Your Name
-    # https://github.com/your-name
-    affiliation: Your Institute
-    address:
-      -
-      - 
-      - \orcid{here}
-    email: your@email
-  - name: Tyson Lee Swetnam
-    # https://github.com/tyson-swetnam
-    affiliation: University of Arizona
-    address:
-      - 1657 E Helen St.
-      - Tucson, AZ, 85721, USA
-      - \orcid{0000-0002-6639-7181}
-    email: tswetnam@arizona.edu
-    
-output: pdf_document
-fontsize: 12pt
+title: "Do androids dream of electric sorhgum?" 
+subtitle: "Predicting Phenotype from Multi-Scale Genomic and Environment Data using Neural Networks and Knowledge Graphs"
+keywords: "machine learning, genomics, phenotype"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+author: 
+- Ryan Bartelme^[Corresponding Author rbartelme@arizona.edu, University of Arizona]
+  # https://github.com/rbartleme
+- Tyson Lee Swetnam^[University of Arizona]
+  # https://github.com/tyson-swetnam
+  # email: tswetnam@arizona.edu
+bibliography: references.bib
+thanks: "Replication files are available on the corresponding author's Github account"
+output: 
+  pdf_document:
+    citation_package: natbib
+    keep_tex: true
+    fig_caption: true
+    latex_engine: pdflatex
+keep-latex: true
+fontsize: 11pt
 geometry: margin=1in
+fontfamily: mathpazo
+spacing: double
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(tinytex)
-library(yaml)
+#library("magick")
+library("here")
+library("tinytex")
+library("yaml")
 ```
+ 
   During this period of unprecedented anthropogenic climate change, understanding genomic response to environmental variation and the influences on organismal phenotypes is critical.
 Predicting these responses is invaluable to maintain the innumerable services natural ecosystems provide. 
-Multiscale effects over time and space combined with the non-linearity of natural systems \citep{lorenz1963deterministic; ruel1999jensen; west2009general} obscures the signal of biological processes, their interactions with the environment, and resulting observable phenotypes (Figure 1).
+Multiscale effects over time and space combined with the non-linearity of natural systems @lorenz1963deterministic, @ruel1999jensen, @west2009general obscures the signal of biological processes, their interactions with the environment, and resulting observable phenotypes (Figure 1).
 
   Existing models for predicting phenotypes from genetic and environmental data focus on single species or single ecosystems.
-As we enter an era of Big Data in ecological research \citep{balch2020neon}, ecologists are shifting away from relatively small data sets toward national and global efforts such as the National Ecological Observatory Network (NEON) \citep{keller2008continental} and airborne and space-based Earth Observation Systems (EOS). 
+As we enter an era of Big Data in ecological research @balch2020neon, ecologists are shifting away from relatively small data sets toward national and global efforts such as the National Ecological Observatory Network (NEON) @keller2008continental and airborne and space-based Earth Observation Systems (EOS). 
 Both societal need and technical capabilities are moving toward addressing larger scale questions that require integration of multi-modal data and non-linear predictive models to understand the interactions between an organism’s genetic potential and its environment and how those interactions result in observable phenotypes.
 
-  Incorporating genomic data into phenomics is challenging. Many recent studies have used only environmental features and machine learning to predict phenotypes of lilacs, honeysuckle, rice, and wheat \citep{ALDERMAN20171, nissanka2015calibration, Poor, 2019). 
+  Incorporating genomic data into phenomics is challenging. Many recent studies have used only environmental features and machine learning to predict phenotypes of lilacs, honeysuckle, rice, and wheat @ALDERMAN20171, @nissanka2015calibration, Poor, 2019). 
 There are a number of methods linking genomic data to environments or traits. 
-For example, genome wide association studies (GWAS) enable researchers to examine the influence of single nucleotide polymorphisms (SNP) on phenotypes in both natural and controlled settings \citep{beyer2019loci, schlappi2017assessment, spindel2016genome}. 
+For example, genome wide association studies (GWAS) enable researchers to examine the influence of single nucleotide polymorphisms (SNP) on phenotypes in both natural and controlled settings @beyer2019loci, @schlappi2017assessment, @spindel2016genome. 
 GWAS often provides generalized and mixed linear model associations between SNPs and environmental variables, roughly analogous to Genes + Environment = Phenotype (G+E=P). 
 There are limitations in the assumptions made by existing methodologies, such as GWAS, that directly attribute plant phenotypes to environmental variables. 
-These methods do not explicitly incorporate biological and molecular interactions, such as post-translational modification of macromolecules \citep{running2014role}, the importance of plant-microbe interactions \citep{oyserman2019extracting}, or endogenous siRNA \citep{katiyar2006pathogen}. 
+These methods do not explicitly incorporate biological and molecular interactions, such as post-translational modification of macromolecules @running2014role, the importance of plant-microbe interactions @oyserman2019extracting, or endogenous siRNA @katiyar2006pathogen. 
 However, our machine learning approach allows for these biological phenomena to be accounted for as latent variables while probing the interactions of Genomes+Environments=Phenomes in a multidimensional manner. 
 
   Conventional observations and statistical models are shifting toward remotely sensed observation and trait collection, which rely on machine learning (ML) and computer vision for measurements. 
-For example, Bayesian Belief Networks \citep{cooper1990computational} may be implemented to associate environmental variables with traits, and Generative Adversarial Networks \citep{radford2015unsupervised} for classifying plant phenotype imaging. 
-Rather than simply generating large quantities of machine readable data \citep{hampton2013big} and implementing ML methods ad-hoc \citep{pichler2020machine}, ecologists are now grappling with how to interpret the massive quantities of unstructured data that are available at scale.  
+For example, Bayesian Belief Networks @cooper1990computational may be implemented to associate environmental variables with traits, and Generative Adversarial Networks @radford2015unsupervised for classifying plant phenotype imaging. 
+Rather than simply generating large quantities of machine readable data @hampton2013big and implementing ML methods ad-hoc @pichler2020machine, ecologists are now grappling with how to interpret the massive quantities of unstructured data that are available at scale.  
 ML predictions often rely on complex, “black box” methodologies to assess explanatory variables. 
 Here we introduce the GenoPhenoEnvo project, an effort to predict phenotype from genetic and environmental data, while developing novel representations of the ML “black-box” internals. 
 
   Our project has the long-term goal of developing predictive analytics based on an organisms’ genetic code and its associated phenomic response to environmental change. 
 To design an initial analytical framework and workflow, we will first use phenomic, genomic, and environmental data about sorghum (Sorghum bicolor). 
-These data are available through the TERRA-REF (Transportation Energy Resources from Renewable Agriculture Phenotyping Reference Platform) project \citep{andrade2014development}. 
+These data are available through the TERRA-REF (Transportation Energy Resources from Renewable Agriculture Phenotyping Reference Platform) project @andrade2014development. 
 After training the ML model on the highly controlled and thorough TERRA-REF data set, we aim to test and further develop the model with data from less controlled and lower resolution environments using data from sources such as NEON and the Global Phenology Network. 
 
-  The first challenge is to prepare these data for use as input into ML models. In addition to empirical data, ontologically-supported knowledge graphs can be used to inform the ML \citep{mungall2017monarch}. 
+  The first challenge is to prepare these data for use as input into ML models. In addition to empirical data, ontologically-supported knowledge graphs can be used to inform the ML @mungall2017monarch. 
 Knowledge graphs (KG) are directed acyclic graphs that represent knowledge in a computational format and are an integral part of Google’s Answer Box and IBM’s Watson.
 KGs can help constrain and prioritize results, provide quality control, fill in data gaps with inferencing, and integrate heterogeneous data. 
-In this project, KGs  provide an easier way to integrate data from established plant phenome databases such as Planteome \citep{cooper2018planteome}, Gramene (Jaiswal, 2011 in \citep{pereira2011plant}), and TAIR (Poole, 2007). 
-The true power of ontologies and KGs is a formal logical structure, enabling inferential and similarity analyses \citep{mungall2017monarch, washington2009linking}.
+In this project, KGs  provide an easier way to integrate data from established plant phenome databases such as Planteome @cooper2018planteome, Gramene (Jaiswal, 2011 in @pereira2011plant), and TAIR (Poole, 2007). 
+The true power of ontologies and KGs is a formal logical structure, enabling inferential and similarity analyses @mungall2017monarch, @washington2009linking.
 In particular, it is this latter feature that will enable data set interoperability.
 As we begin to make predictions in more complicated systems with multiple species and heterogeneous data, the knowledge graphs will be critical for managing phenotype data.
 
@@ -83,4 +77,4 @@ Ultimately, we believe this combination of methods will generate a new scientifi
 
 The ordering of authors following RB is alphabetical.
 
-\bibliography{references}
+# References
