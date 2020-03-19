@@ -56,7 +56,7 @@ Here we introduce the GenoPhenoEnvo project, an effort to predict phenotype from
 
   Our project has the long-term goal of developing predictive analytics based on an organisms’ genetic code and its associated phenomic response to environmental change. 
 To design an initial analytical framework and workflow, we will first use phenomic, genomic, and environmental data about sorghum (Sorghum bicolor). 
-These data are available through the TERRA-REF (Transportation Energy Resources from Renewable Agriculture Phenotyping Reference Platform) project @andrade2014development. 
+These data are available through the TERRA-REF (Transportation Energy Resources from Renewable Agriculture Phenotyping Reference Platform) project @lebauer2020data @burnette2018terra. 
 After training the ML model on the highly controlled and thorough TERRA-REF data set, we aim to test and further develop the model with data from less controlled and lower resolution environments using data from sources such as NEON and the Global Phenology Network. 
 
   The first challenge is to prepare these data for use as input into ML models. In addition to empirical data, ontologically-supported knowledge graphs can be used to inform the ML @mungall2017monarch. 
