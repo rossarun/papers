@@ -6,9 +6,14 @@ date: "`r format(Sys.time(), '%B %d, %Y')`"
 author: 
 - Ryan Bartelme^[Corresponding Author rbartelme@arizona.edu, University of Arizona]
   # https://github.com/rbartleme
+- David S LeBauer^[University of Arizona]
+  # https://github.com/dlebauer
+  # email: dlebauer@arizona.edu
+  # orcid: 0000-0001-7228-053X
 - Tyson Lee Swetnam^[University of Arizona]
   # https://github.com/tyson-swetnam
   # email: tswetnam@arizona.edu
+
 bibliography: references.bib
 thanks: "Replication files are available on the corresponding author's Github account"
 output: 
