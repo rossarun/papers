@@ -4,8 +4,9 @@ subtitle: "Predicting Phenotype from Multi-Scale Genomic and Environment Data us
 keywords: "machine learning, genomics, phenotype"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 author: 
-- Ryan Bartelme^[Corresponding Author rbartelme@arizona.edu, University of Arizona]
+- Ryan P Bartelme^[Corresponding Author rbartelme@arizona.edu, University of Arizona]
   # https://github.com/rbartleme
+  # orcid: 0000-0002-6178-2603
 - David S LeBauer^[University of Arizona]
   # https://github.com/dlebauer
   # email: dlebauer@arizona.edu
