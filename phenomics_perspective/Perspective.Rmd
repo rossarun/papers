@@ -63,7 +63,7 @@ Multi-scale effects over time and space combined with the non-linearity of natur
   Existing models for predicting phenotypes from genetic and environmental data focus on single species or single ecosystems.
 As we enter an era of Big Data in ecological research [@balch2020neon], ecologists are shifting away from relatively small data sets toward national and global efforts such as the National Ecological Observatory Network (NEON) [@keller2008continental] and airborne and space-based Earth Observation Systems (EOS).
 Both societal need and technical capabilities are moving toward addressing larger scale questions that require integration of multi-modal data and non-linear predictive models to understand the interactions between an organism’s genetic potential and its environment and how those interactions result in observable phenotypes.
-Ontologies and knowledge graphs are now available for data integration at scale (e.g., Mungall et al. 2010, Stucky et al. 2018), enabling an increasing scope beyond single taxon or single ecosystem models.
+Ontologies and knowledge graphs are now available for data integration at scale (e.g., [@mungall_integrating_2010; @stucky_plant_2018]), enabling an increasing scope beyond single taxon or single ecosystem models.
 
 
 # Challenges Dataset Interoperability
@@ -78,7 +78,7 @@ However, a machine learning approach allows for these biological phenomena to be
 
   Conventional observations and statistical models are shifting toward remotely sensed observation and trait collection, which rely on machine learning (ML) and computer vision for measurements.
 For example, Bayesian Belief Networks [@cooper1990computational] may be implemented to associate environmental variables with traits, and Generative Adversarial Networks [@radford2015unsupervised] for classifying plant phenotype imaging.
-Rather than simply generating large quantities of machine readable data [@hampton2013big] and implementing ML methods ad-hoc [@pichler2020machine], ecologists are now grappling with how to interpret the massive quantities of unstructured data that are available at scale.  
+Rather than simply generating large quantities of machine readable data [@hampton2013big] and implementing ML methods ad-hoc [@pichler2020machine], ecologists are now grappling with how to interpret the massive quantities of unstructured data that are available at scale.
 ML predictions often rely on complex, “black box” methodologies to assess explanatory variables.
 Here we introduce the GenoPhenoEnvo project, an effort to predict phenotype from genetic and environmental data, while developing novel representations of the ML “black-box” internals.
 
