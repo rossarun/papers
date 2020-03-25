@@ -57,7 +57,7 @@ For example, genome wide association studies (GWAS) enable researchers to examin
 GWAS often provides generalized and mixed linear model associations between SNPs and environmental variables, roughly analogous to Genes + Environment = Phenotype (G+E=P).
 There are limitations in the assumptions made by existing methodologies, such as GWAS, that directly attribute plant phenotypes to environmental variables.
 These methods do not explicitly incorporate biological and molecular interactions, such as post-translational modification of macromolecules @running2014role, the importance of plant-microbe interactions @oyserman2019extracting, or endogenous siRNA @katiyar2006pathogen.
-However, our machine learning approach allows for these biological phenomena to be accounted for as latent variables while probing the interactions of Genomes+Environments=Phenomes in a multidimensional manner.
+However, a machine learning approach using neural networks allows for these biological phenomena to be accounted for as latent variables while probing the interactions of genes, phenotypes, and environments in a multidimensional manner.
 
   Conventional observations and statistical models are shifting toward remotely sensed observation and trait collection, which rely on machine learning (ML) and computer vision for measurements.
 For example, Bayesian Belief Networks @cooper1990computational may be implemented to associate environmental variables with traits, and Generative Adversarial Networks @radford2015unsupervised for classifying plant phenotype imaging.
