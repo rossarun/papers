@@ -1,7 +1,7 @@
 \PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
 \PassOptionsToPackage{hyphens}{url}
 %
-\documentclass[11pt,]{article}
+\documentclass[12pt,]{article}
 \usepackage[]{mathpazo}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -64,6 +64,7 @@
 \def\fps@figure{htbp}
 \makeatother
 
+\usepackage[sort&compress, numbers]{natbib}
 \usepackage{etoolbox}
 \makeatletter
 \providecommand{\subtitle}[1]{% add subtitle to \maketitle
@@ -71,7 +72,7 @@
 }
 \makeatother
 \usepackage[]{natbib}
-\bibliographystyle{plainnat}
+\bibliographystyle{plantphenomics}
 
 \title{Do androids dream of electric sorhgum?\thanks{Replication files are available on the corresponding author's Github
 account}}
@@ -81,7 +82,7 @@ Neural Networks and Knowledge Graphs}
 \author{Ryan P Bartelme\footnote{Corresponding Author
   \href{mailto:rbartelme@arizona.edu}{\nolinkurl{rbartelme@arizona.edu}},
   University of Arizona} \and David S LeBauer\footnote{University of Arizona} \and Tyson Lee Swetnam\footnote{University of Arizona}}
-\date{March 20, 2020}
+\date{March 25, 2020}
 
 \begin{document}
 \maketitle
@@ -93,18 +94,18 @@ During this period of unprecedented anthropogenic climate change,
 understanding genomic response to environmental variation and the
 influences on organismal phenotypes is critical. Predicting these
 responses is invaluable to maintain the innumerable services natural
-ecosystems provide. Multiscale effects over time and space combined with
-the non-linearity of natural systems \citet{lorenz1963deterministic},
-\citet{ruel1999jensen}, \citet{west2009general} obscures the signal of
-biological processes, their interactions with the environment, and
-resulting observable phenotypes.
+ecosystems provide. Multi-scale effects over time and space combined
+with the non-linearity of natural systems
+\citep{lorenz1963deterministic, ruel1999jensen, west2009general}
+obscures the signal of biological processes, their interactions with the
+environment, and resulting observable phenotypes.
 
 Existing models for predicting phenotypes from genetic and environmental
 data focus on single species or single ecosystems. As we enter an era of
-Big Data in ecological research \citet{balch2020neon}, ecologists are
+Big Data in ecological research \citep{balch2020neon}, ecologists are
 shifting away from relatively small data sets toward national and global
 efforts such as the National Ecological Observatory Network (NEON)
-\citet{keller2008continental} and airborne and space-based Earth
+\citep{keller2008continental} and airborne and space-based Earth
 Observation Systems (EOS). Both societal need and technical capabilities
 are moving toward addressing larger scale questions that require
 integration of multi-modal data and non-linear predictive models to
@@ -119,35 +120,35 @@ Interoperability}\label{challenges-dataset-interoperability}}
 Incorporating genomic data into phenomics is challenging. Many recent
 studies have used only environmental features and machine learning to
 predict phenotypes of lilacs, honeysuckle, rice, and wheat
-\citet{ALDERMAN20171}, \citet{nissanka2015calibration}, Poor, 2019).
+\citep{ALDERMAN20171, nissanka2015calibration, mehdipoor2019geocomputational}.
 There are a number of methods linking genomic data to environments or
 traits. For example, genome wide association studies (GWAS) enable
 researchers to examine the influence of single nucleotide polymorphisms
 (SNP) on phenotypes in both natural and controlled settings
-\citet{beyer2019loci}, \citet{schlappi2017assessment},
-\citet{spindel2016genome}. GWAS often provides generalized and mixed
-linear model associations between SNPs and environmental variables,
-roughly analogous to Genes + Environment = Phenotype (G+E=P). There are
-limitations in the assumptions made by existing methodologies, such as
-GWAS, that directly attribute plant phenotypes to environmental
-variables. These methods do not explicitly incorporate biological and
-molecular interactions, such as post-translational modification of
-macromolecules \citet{running2014role}, the importance of plant-microbe
-interactions \citet{oyserman2019extracting}, or endogenous siRNA
-\citet{katiyar2006pathogen}. However, our machine learning approach
+\citep{beyer2019loci, schlappi2017assessment, spindel2016genome}. GWAS
+often provides generalized and mixed linear model associations between
+SNPs and environmental variables, roughly analogous to Genes +
+Environment = Phenotype (G+E=P). There are limitations in the
+assumptions made by existing methodologies, such as GWAS, that directly
+attribute plant phenotypes to environmental variables. These methods do
+not explicitly incorporate biological and molecular interactions, such
+as post-translational modification of macromolecules
+\citep{running2014role}, the importance of plant-microbe interactions
+\citep{oyserman2019extracting}, or endogenous siRNA
+\citep{katiyar2006pathogen}. However, our machine learning approach
 allows for these biological phenomena to be accounted for as latent
-variables while probing the interactions of
-Genomes+Environments=Phenomes in a multidimensional manner.
+variables while probing the interactions of Genomes + Environments =
+Phenotypes in a multidimensional manner.
 
 Conventional observations and statistical models are shifting toward
 remotely sensed observation and trait collection, which rely on machine
 learning (ML) and computer vision for measurements. For example,
-Bayesian Belief Networks \citet{cooper1990computational} may be
+Bayesian Belief Networks \citep{cooper1990computational} may be
 implemented to associate environmental variables with traits, and
-Generative Adversarial Networks \citet{radford2015unsupervised} for
+Generative Adversarial Networks \citep{radford2015unsupervised} for
 classifying plant phenotype imaging. Rather than simply generating large
-quantities of machine readable data \citet{hampton2013big} and
-implementing ML methods ad-hoc \citet{pichler2020machine}, ecologists
+quantities of machine readable data \citep{hampton2013big} and
+implementing ML methods ad-hoc \citep{pichler2020machine}, ecologists
 are now grappling with how to interpret the massive quantities of
 unstructured data that are available at scale.\\
 ML predictions often rely on complex, ``black box'' methodologies to
@@ -160,36 +161,36 @@ internals.
 \section{Future Directions}\label{future-directions}}
 
 Our project has the long-term goal of developing predictive analytics
-based on an organisms' genetic code and its associated phenomic response
-to environmental change. To design an initial analytical framework and
-workflow, we will first use phenomic, genomic, and environmental data
-about sorghum (Sorghum bicolor). These data are available through the
-TERRA-REF (Transportation Energy Resources from Renewable Agriculture
-Phenotyping Reference Platform) project \citet{lebauer2020data}
-\citet{burnette2018terra}. After training the ML model on the highly
-controlled and thorough TERRA-REF data set, we aim to test and further
-develop the model with data from less controlled and lower resolution
-environments using data from sources such as NEON and the Global
-Phenology Network.
+based on an organisms' genetic code and its associated phenotypic
+response to environmental change. To design an initial analytical
+framework and workflow, we will first use phenomic, genomic, and
+environmental data about sorghum (\emph{Sorghum bicolor}). These data
+are available through the TERRA-REF (Transportation Energy Resources
+from Renewable Agriculture Phenotyping Reference Platform) project
+\citep{lebauer2020data, burnette2018terra}. After training the ML model
+on the highly controlled and thorough TERRA-REF data set, we aim to test
+and further develop the model with data from less controlled and lower
+resolution environments using data from sources such as NEON and the
+National Phenology Network.
 
 The first challenge is to prepare these data for use as input into ML
 models. In addition to empirical data, ontologically-supported knowledge
-graphs can be used to inform the ML \citet{mungall2017monarch}.
+graphs can be used to inform the ML \citep{mungall2017monarch}.
 Knowledge graphs (KG) are directed acyclic graphs that represent
 knowledge in a computational format and are an integral part of Google's
 Answer Box and IBM's Watson. KGs can help constrain and prioritize
 results, provide quality control, fill in data gaps with inferencing,
 and integrate heterogeneous data. In this project, KGs provide an easier
 way to integrate data from established plant phenome databases such as
-Planteome \citet{cooper2018planteome}, Gramene (Jaiswal, 2011 in
-\citet{pereira2011plant}), and TAIR (Poole, 2007). The true power of
-ontologies and KGs is a formal logical structure, enabling inferential
-and similarity analyses \citet{mungall2017monarch},
-\citet{washington2009linking}. In particular, it is this latter feature
-that will enable data set interoperability. As we begin to make
-predictions in more complicated systems with multiple species and
-heterogeneous data, the knowledge graphs will be critical for managing
-phenotype data.
+Planteome \citep{cooper2018planteome}, Gramene
+\citep{jaiswal_gramene_2011}, and TAIR \citep{poole_tair_2007}. The true
+power of ontologies and KGs is a formal logical structure, enabling
+inferential and similarity analyses
+\citep{mungall2017monarch, washington2009linking}. In particular, it is
+this latter feature that will enable data set interoperability. As we
+begin to make predictions in more complicated systems with multiple
+species and heterogeneous data, the knowledge graphs will be critical
+for managing phenotype data.
 
 The GenoPhenoEnvo (GPE) project aims to predict phenotype with genomic
 and environmental data using a multimodal approach to training ML
@@ -201,8 +202,8 @@ genotype to phenotype. In addition to increased awareness of molecular
 effects, the ML models could enable specific ecological hypothesis
 testing or predicting long-term speciation events driven by
 environmental factors. Ultimately, we believe this combination of
-methods will generate a new scientific subdiscipline, one we have called
-``Computational Ecogenomics.''
+methods will generate a new scientific sub-discipline, one we have
+called ``\emph{Computational Ecogenomics.}''
 
 \hypertarget{author-contributions}{%
 \section{Author contributions}\label{author-contributions}}
