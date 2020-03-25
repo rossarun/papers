@@ -44,8 +44,9 @@ library("yaml")
 Predicting these responses is invaluable to maintain the innumerable services natural ecosystems provide.
 Multi-scale effects over time and space combined with the non-linearity of natural systems @lorenz1963deterministic, @ruel1999jensen, @west2009general obscures the signal of biological processes, their interactions with the environment, and resulting observable phenotypes.
 
-  Existing models for predicting phenotypes from genetic and environmental data focus on single species or single ecosystems.
+  Existing models for predicting phenotypes from genetic and environmental data focus on single species or single ecosystems (add references from proposal).
 As we enter an era of Big Data in ecological research @balch2020neon, ecologists are shifting away from relatively small data sets toward national and global efforts such as the National Ecological Observatory Network (NEON) @keller2008continental and airborne and space-based Earth Observation Systems (EOS).
+Ontologies and knowledge graphs are now available for data integration at scale (e.g., Mungall et al. 2010, Stucky et al. 2018), enabling an increasing scope beyond single taxon or single ecosystem models.
 Both societal need and technical capabilities are moving toward addressing larger scale questions that require integration of multi-modal data and non-linear predictive models to understand the interactions between an organism’s genetic potential and its environment and how those interactions result in observable phenotypes.
 
 # Challenges Dataset Interoperability
