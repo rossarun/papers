@@ -14,6 +14,19 @@ author:
 - Tyson Lee Swetnam^[University of Arizona]
   # https://github.com/tyson-swetnam
   # email: tswetnam@arizona.edu
+- Michael Behrish
+- Emily Cain
+- Ishita Debnath
+- Pankaj Jaiswal
+- Ab Mosca
+- Monica Munoz-Torres
+- Kent Shefchek
+- P. Bryan Heidorn
+- Remco Chang
+- Arun Ross
+- Anne E Thessen^[Oregon State University]
+  # email: annethessen@gmail.com
+  # orcid: 0000-0002-2908-3327
 
 bibliography: references.bib
 thanks: "Replication files are available on the corresponding author's Github account"
@@ -89,5 +102,20 @@ Ultimately, we believe this combination of methods will generate a new scientifi
 # Author contributions
 
 The ordering of authors following RB is alphabetical.
+
+RPB: Conceptualization, Writing-original draft
+DSL: Conceptualization, Funding Acquisition, Writing-review&editing
+TLS: Conceptualization, Funding Acquisition, Writing-review&editing
+MB: Conceptualization
+EC: Conceptualization
+ID: Conceptualization
+PJ: Conceptualization, Funding Acquisition
+AM: Conceptualization
+MMT: Conceptualization, Funding Acquisition, Project Administration
+KS: Conceptualization
+PBH: Conceptualization, Funding Acquisition
+RC: Conceptualization, Funding Acquisition
+AR: Conceptualization, Funding Acquisition
+AET: Conceptualization, Funding Acquisition, Supervision, Writing-review&editing
 
 # References
