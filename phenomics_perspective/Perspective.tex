@@ -30,7 +30,7 @@
 \usepackage{hyperref}
 \hypersetup{
             pdftitle={Do androids dream of electric sorhgum?},
-            pdfauthor={Ryan P Bartelme; David S LeBauer; Tyson Lee Swetnam},
+            pdfauthor={Ryan P Bartelme; David S LeBauer; Tyson Lee Swetnam; Michael Behrish; Emily Cain; Ishita Debnath; Pankaj Jaiswal; Ab Mosca; Monica Munoz-Torres; Kent Shefchek; P. Bryan Heidorn; Remco Chang; Arun Ross; Anne E Thessen},
             pdfkeywords={machine learning, genomics, phenotype},
             pdfborder={0 0 0},
             breaklinks=true}
@@ -81,7 +81,7 @@ account}}
 Neural Networks and Knowledge Graphs}
 \author{Ryan P Bartelme\footnote{Corresponding Author
   \href{mailto:rbartelme@arizona.edu}{\nolinkurl{rbartelme@arizona.edu}},
-  University of Arizona} \and David S LeBauer\footnote{University of Arizona} \and Tyson Lee Swetnam\footnote{University of Arizona}}
+  University of Arizona} \and David S LeBauer\footnote{University of Arizona} \and Tyson Lee Swetnam\footnote{University of Arizona} \and Michael Behrish \and Emily Cain \and Ishita Debnath \and Pankaj Jaiswal \and Ab Mosca \and Monica Munoz-Torres \and Kent Shefchek \and P. Bryan Heidorn \and Remco Chang \and Arun Ross \and Anne E Thessen\footnote{Oregon State University}}
 \date{March 25, 2020}
 
 \begin{document}
@@ -111,7 +111,10 @@ are moving toward addressing larger scale questions that require
 integration of multi-modal data and non-linear predictive models to
 understand the interactions between an organism's genetic potential and
 its environment and how those interactions result in observable
-phenotypes.
+phenotypes. Ontologies and knowledge graphs are now available for data
+integration at scale (e.g., Mungall et al.~2010, Stucky et al.~2018),
+enabling an increasing scope beyond single taxon or single ecosystem
+models.
 
 \hypertarget{challenges-dataset-interoperability}{%
 \section{Challenges Dataset
@@ -135,10 +138,10 @@ not explicitly incorporate biological and molecular interactions, such
 as post-translational modification of macromolecules
 \citep{running2014role}, the importance of plant-microbe interactions
 \citep{oyserman2019extracting}, or endogenous siRNA
-\citep{katiyar2006pathogen}. However, our machine learning approach
-allows for these biological phenomena to be accounted for as latent
-variables while probing the interactions of Genomes + Environments =
-Phenotypes in a multidimensional manner.
+\citep{katiyar2006pathogen}. However, a machine learning approach allows
+for these biological phenomena to be accounted for as latent variables
+while probing the interactions of genomes, environments, and phenotypes
+in a multidimensional manner.
 
 Conventional observations and statistical models are shifting toward
 remotely sensed observation and trait collection, which rely on machine
@@ -209,6 +212,17 @@ called ``\emph{Computational Ecogenomics.}''
 \section{Author contributions}\label{author-contributions}}
 
 The ordering of authors following RB is alphabetical.
+
+RPB: Conceptualization, Writing-original draft DSL: Conceptualization,
+Funding Acquisition, Writing-review\&editing TLS: Conceptualization,
+Funding Acquisition, Writing-review\&editing MB: Conceptualization EC:
+Conceptualization ID: Conceptualization PJ: Conceptualization, Funding
+Acquisition AM: Conceptualization MMT: Conceptualization, Funding
+Acquisition, Project Administration KS: Conceptualization PBH:
+Conceptualization, Funding Acquisition RC: Conceptualization, Funding
+Acquisition AR: Conceptualization, Funding Acquisition AET:
+Conceptualization, Funding Acquisition, Supervision,
+Writing-review\&editing
 
 \renewcommand\refname{References}
 \bibliography{references.bib}
