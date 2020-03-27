@@ -30,7 +30,7 @@
 \usepackage{hyperref}
 \hypersetup{
             pdftitle={Do androids dream of electric sorhgum?},
-            pdfauthor={Ryan P Bartelme; David S LeBauer; Tyson Lee Swetnam; Michael Behrish; Emily Cain; Ishita Debnath; Pankaj Jaiswal; Ab Mosca; Monica Munoz-Torres; Kent Shefchek; P. Bryan Heidorn; Remco Chang; Arun Ross; Anne E Thessen},
+            pdfauthor={Ryan P Bartelme; David S LeBauer; Tyson L Swetnam; Michael Behrish; Emily J Cain; Ishita Debnath; Pankaj Jaiswal; Ab Mosca; Monica Munoz-Torres; Kent Shefchek; P. Bryan Heidorn; Remco Chang; Arun Ross; Anne E Thessen},
             pdfkeywords={machine learning, genomics, phenotype},
             pdfborder={0 0 0},
             breaklinks=true}
@@ -81,8 +81,8 @@ account}}
 Neural Networks and Knowledge Graphs}
 \author{Ryan P Bartelme\footnote{Corresponding Author
   \href{mailto:rbartelme@arizona.edu}{\nolinkurl{rbartelme@arizona.edu}},
-  University of Arizona} \and David S LeBauer\footnote{University of Arizona} \and Tyson Lee Swetnam\footnote{University of Arizona} \and Michael Behrish \and Emily Cain \and Ishita Debnath \and Pankaj Jaiswal \and Ab Mosca \and Monica Munoz-Torres \and Kent Shefchek \and P. Bryan Heidorn \and Remco Chang \and Arun Ross \and Anne E Thessen\footnote{Oregon State University}}
-\date{March 25, 2020}
+  University of Arizona} \and David S LeBauer\footnote{University of Arizona} \and Tyson L Swetnam\footnote{University of Arizona} \and Michael Behrish \and Emily J Cain\footnote{University of Arizona} \and Ishita Debnath \and Pankaj Jaiswal \and Ab Mosca \and Monica Munoz-Torres \and Kent Shefchek \and P. Bryan Heidorn \and Remco Chang \and Arun Ross \and Anne E Thessen\footnote{Oregon State University}}
+\date{March 27, 2020}
 
 \begin{document}
 \maketitle
@@ -90,31 +90,39 @@ Neural Networks and Knowledge Graphs}
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-During this period of unprecedented anthropogenic climate change,
-understanding genomic response to environmental variation and the
-influences on organismal phenotypes is critical. Predicting these
-responses is invaluable to maintain the innumerable services natural
-ecosystems provide. Multi-scale effects over time and space combined
-with the non-linearity of natural systems
+Understanding genomic responses of plants and animals to environmental
+variation allows prediction
+\citep{ungerer2008ecological, des2013genotype}. Environmental factors
+that influence organismal phenotype, fecundity, morbidity, and mortality
+in turn affect agricultural and natural ecosystems (Fig. 1). However,
+multi-scale effects over time and space combined with the non-linearity
+of natural systems
 \citep{lorenz1963deterministic, ruel1999jensen, west2009general}
-obscures the signal of biological processes, their interactions with the
-environment, and resulting observable phenotypes.
+obscures the signal of biological processes, interactions with the
+environment, and the resulting (observable) phenotypes. Unprecedented
+anthropogenic climate change necessitates us to have the ability to
+adapt crops and modify ecosystems. Maintaining the innumerable benefits
+and services agronomic and natural systems provides is therefore
+critical to our survival and prosperity.
 
 Existing models for predicting phenotypes from genetic and environmental
-data focus on single species or single ecosystems. As we enter an era of
-Big Data in ecological research \citep{balch2020neon}, ecologists are
-shifting away from relatively small data sets toward national and global
-efforts such as the National Ecological Observatory Network (NEON)
-\citep{keller2008continental} and airborne and space-based Earth
-Observation Systems (EOS). Both societal need and technical capabilities
-are moving toward addressing larger scale questions that require
-integration of multi-modal data and non-linear predictive models to
-understand the interactions between an organism's genetic potential and
-its environment and how those interactions result in observable
-phenotypes. Ontologies and knowledge graphs are now available for data
-integration at scale (e.g.,
-\citep{mungall_integrating_2010, stucky_plant_2018}), enabling an
-increasing scope beyond single taxon or single ecosystem models.
+data focus on single species or single ecosystems. However, both
+societal need and technical capabilities are moving toward addressing
+larger scale questions that require integration of multi-modal data. In
+addition to relatively small and heterogeneous data sets, researchers
+are relying on national and global data collection efforts
+\citep{balch2020neon} such as the National Ecological Observatory
+Network (NEON) \citep{keller2008continental} and airborne and
+space-based Earth Observation Systems (EOS). These efforts produce large
+quantities of homogeneous ``born-digital'' data, but a significant
+interdisciplinary data-integration task remains. Ontologies and
+knowledge graphs using semantic similarity to cope with problems of
+granularity and terminology (e.g.,
+\citep{mungall_integrating_2010, stucky_plant_2018}) are now available
+to facilitate data integration at scales beyond a single taxon or single
+ecosystem. In addition, as the data sets and questions become more
+complicated, more non-linear predictive models are needed to address
+them.
 
 \hypertarget{challenges-dataset-interoperability}{%
 \section{Challenges Dataset
@@ -153,11 +161,13 @@ classifying plant phenotype imaging. Rather than simply generating large
 quantities of machine readable data \citep{hampton2013big} and
 implementing ML methods ad-hoc \citep{pichler2020machine}, ecologists
 are now grappling with how to interpret the massive quantities of
-unstructured data that are available at scale. ML predictions often rely
-on complex, ``black box'' methodologies to assess explanatory variables.
-Here we introduce the GenoPhenoEnvo project, an effort to predict
-phenotype from genetic and environmental data, while developing novel
-representations of the ML ``black-box'' internals.
+unstructured data that are available at scale. Unfortunately, the ML
+that provides a scalable, non-linear method for using these data, relies
+on complex, ``black box'' methodologies to assess explanatory variables,
+which does not aid interpretation. Here we introduce the GenoPhenoEnvo
+project, an effort to predict phenotype from genetic and environmental
+data, while developing novel representations of the ML ``black-box''
+internals.
 
 \hypertarget{future-directions}{%
 \section{Future Directions}\label{future-directions}}
