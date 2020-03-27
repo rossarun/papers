@@ -17,7 +17,10 @@ author:
   # https://github.com/tyson-swetnam
   # email: tswetnam@arizona.edu
 - Michael Behrish
-- Emily Cain
+- Emily J Cain^[University of Arizona]
+  # https://github.com/MagicMilly
+  # email: ejcain@arizona.edu
+  # orcid: 0000-0002-4671-1524
 - Ishita Debnath
 - Pankaj Jaiswal
 - Ab Mosca
