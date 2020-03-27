@@ -1,14 +1,22 @@
-  
-FROM rocker/binder:3.6.0
-LABEL maintainer='Tyson Lee Swetnam'
+## Use a tag instead of "latest" for reproducibility
+FROM rocker/binder:latest
+
+## Declares build arguments
+ARG NB_USER
+ARG NB_UID
+
+## Copies your repo files into the Docker Container
 USER root
-#RUN tlmgr init-usertree \
-# && tlmgr update --self \
-# && tlmgr install pgf environ placeins psnfss titlesec trimspaces palatino mathpazo setspace microtype xcolor fancyhdr ms
 COPY . ${HOME}
+## Enable this to copy files from the binder subdirectory
+## to the home, overriding any existing files.
+## Useful to create a setup on binder that is different from a
+## clone of your repository
+## COPY binder ${HOME}
 RUN chown -R ${NB_USER} ${HOME}
+
+## Become normal user again
 USER ${NB_USER}
 
-RUN wget https://raw.githubusercontent.com/genophenoenvo/papers/master/phenomics_perspective/DESCRIPTION && R -e "options(repos = list(CRAN = 'http://mran.revolutionanalytics.com/snapshot/2020-01-28/')); devtools::install_deps()"
-
-RUN rm DESCRIPTION.1; exit 0
+## Run an install.R script, if it exists.
+RUN if [ -f install.R ]; then R --quiet -f install.R; fi
