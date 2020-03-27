@@ -60,9 +60,11 @@ library("yaml")
 Predicting these responses is invaluable to maintain the innumerable services natural ecosystems provide.
 Multi-scale effects over time and space combined with the non-linearity of natural systems [@lorenz1963deterministic; @ruel1999jensen; @west2009general] obscures the signal of biological processes, their interactions with the environment, and resulting observable phenotypes.
 
-  Existing models for predicting phenotypes from genetic and environmental data focus on single species or single ecosystems; however, both societal need and technical capabilities are moving toward addressing larger scale questions that require integration of multi-modal data.
-In addition to relatively small and heterogeneous data sets, researchers are relying on national and global data collection efforts [@balch2020neon] such as the National Ecological Observatory Network (NEON) [@keller2008continental] and airborne and space-based Earth Observation Systems (EOS) that produce large quantities of homogeneous "born-digital" data, but a significant interdisciplinary data-integration task remains.
-Ontologies and knowledge graphs are now available for data integration at scale using semantic similarity to cope with problems of granularity and terminology (e.g., [@mungall_integrating_2010; @stucky_plant_2018]) and enabling an increasing scope beyond single taxon or single ecosystem models.
+  Existing models for predicting phenotypes from genetic and environmental data focus on single species or single ecosystems.
+However, both societal need and technical capabilities are moving toward addressing larger scale questions that require integration of multi-modal data.
+In addition to relatively small and heterogeneous data sets, researchers are relying on national and global data collection efforts [@balch2020neon] such as the National Ecological Observatory Network (NEON) [@keller2008continental] and airborne and space-based Earth Observation Systems (EOS).
+These efforts produce large quantities of homogeneous "born-digital" data, but a significant interdisciplinary data-integration task remains.
+Ontologies and knowledge graphs using semantic similarity to cope with problems of granularity and terminology (e.g., [@mungall_integrating_2010; @stucky_plant_2018]) are now available to facilitate data integration at scales beyond a single taxon or single ecosystem.
 In addition, as the data sets and questions become more complicated, more non-linear predictive models are needed to address them.
 
 # Challenges Dataset Interoperability
