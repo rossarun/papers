@@ -13,9 +13,10 @@ author:
   # https://github.com/dlebauer
   # email: dlebauer@arizona.edu
   # orcid: 0000-0001-7228-053X
-- Tyson Lee Swetnam^[University of Arizona]
+- Tyson L Swetnam^[University of Arizona]
   # https://github.com/tyson-swetnam
   # email: tswetnam@arizona.edu
+  # orcid: 0000-0002-6639-7181
 - Michael Behrish
 - Emily J Cain^[University of Arizona]
   # https://github.com/MagicMilly
@@ -30,6 +31,7 @@ author:
 - Remco Chang
 - Arun Ross
 - Anne E Thessen^[Oregon State University]
+  # https://github.com/diatomsRcool
   # email: annethessen@gmail.com
   # orcid: 0000-0002-2908-3327
 
@@ -59,9 +61,11 @@ library("yaml")
 
 # Introduction
 
-  During this period of unprecedented anthropogenic climate change, understanding genomic response to environmental variation and the influences on organismal phenotypes is critical.
-Predicting these responses is invaluable to maintain the innumerable services natural ecosystems provide.
-Multi-scale effects over time and space combined with the non-linearity of natural systems [@lorenz1963deterministic; @ruel1999jensen; @west2009general] obscures the signal of biological processes, their interactions with the environment, and resulting observable phenotypes.
+  Understanding genomic responses of plants and animals to environmental variation allows prediction [@ungerer2008ecological; @des2013genotype]. 
+Environmental factors that influence organismal phenotype, fecundity, morbidity, and mortality in turn affect agricultural and natural ecosystems (Fig. 1). 
+However, multi-scale effects over time and space combined with the non-linearity of natural systems [@lorenz1963deterministic; @ruel1999jensen; @west2009general] obscures the signal of biological processes, interactions with the environment, and the resulting (observable) phenotypes. 
+Unprecedented anthropogenic climate change necessitates us to have the ability to adapt crops and modify ecosystems.
+Maintaining the innumerable benefits and services agronomic and natural systems provides is therefore critical to our survival and prosperity.
 
   Existing models for predicting phenotypes from genetic and environmental data focus on single species or single ecosystems.
 However, both societal need and technical capabilities are moving toward addressing larger scale questions that require integration of multi-modal data.
@@ -70,7 +74,7 @@ These efforts produce large quantities of homogeneous "born-digital" data, but a
 Ontologies and knowledge graphs using semantic similarity to cope with problems of granularity and terminology (e.g., [@mungall_integrating_2010; @stucky_plant_2018]) are now available to facilitate data integration at scales beyond a single taxon or single ecosystem.
 In addition, as the data sets and questions become more complicated, more non-linear predictive models are needed to address them.
 
-# Challenges Dataset Interoperability
+# Challenges of Dataset Interoperability
 
   Incorporating genomic data into phenomics is challenging. Many recent studies have used only environmental features and machine learning to predict phenotypes of lilacs, honeysuckle, rice, and wheat [@ALDERMAN20171; @nissanka2015calibration; @mehdipoor2019geocomputational].
 There are a number of methods linking genomic data to environments or traits.
