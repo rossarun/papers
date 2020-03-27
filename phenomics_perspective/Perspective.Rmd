@@ -27,7 +27,10 @@ author:
 - Monica Munoz-Torres
 - Kent Shefchek
 - P. Bryan Heidorn
-- Remco Chang
+- Remco Chang^[Tufts University]
+  # http://www.cs.tufts.edu/~remco
+  # email: remco@cs.tufts.edu
+  # orcid: 0000-0002-6484-6430
 - Arun Ross
 - Anne E Thessen^[Oregon State University]
   # email: annethessen@gmail.com
