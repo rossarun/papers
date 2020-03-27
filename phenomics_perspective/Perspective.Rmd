@@ -64,10 +64,10 @@ library("yaml")
 
 # Introduction
 
-  Understanding genomic responses of plants and animals to environmental variation allows prediction [@ungerer2008ecological; @des2013genotype]. 
+  Unprecedented anthropogenic climate change necessitates us to have the ability to adapt crops and modify ecosystems.
+Understanding genomic responses of plants and animals to environmental variation allows prediction [@ungerer2008ecological; @des2013genotype]. 
 Environmental factors that influence organismal phenotype, fecundity, morbidity, and mortality in turn affect agricultural and natural ecosystems (Fig. 1). 
 However, multi-scale effects over time and space combined with the non-linearity of natural systems [@lorenz1963deterministic; @ruel1999jensen; @west2009general] obscures the signal of biological processes, interactions with the environment, and the resulting (observable) phenotypes. 
-Unprecedented anthropogenic climate change necessitates us to have the ability to adapt crops and modify ecosystems.
 Maintaining the innumerable benefits and services agronomic and natural systems provides is therefore critical to our survival and prosperity.
 
   Existing models for predicting phenotypes from genetic and environmental data focus on single species or single ecosystems.
